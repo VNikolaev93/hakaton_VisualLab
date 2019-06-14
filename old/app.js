@@ -1,6 +1,6 @@
 const input = document.querySelector('input[type=file]');
 
-input.addEventListener('change', function (ev) {
+input.addEventListener('change', function (ev) { //сработало событие Change и мы получили список всех файлов
     //
     const files = ev.target.files; //массив files, список файлов, которые мы можем выбрать для передачи на сервер
 
@@ -11,28 +11,28 @@ input.addEventListener('change', function (ev) {
 
     formData.append('photo', file);
 
-    // const request = new XMLHttpRequest();
+    const request = new XMLHttpRequest();
+
+    request.addEventListener('load', function () { //событие сработает, когда мы получим ответ от сервера
+        console.log(request.responseText);
+    });
+
+    request.open('POST', '/upload_photo.php');
+    request.send(formData);
+
+    // fetch('upload_photo.php', {body: formData, method: 'POST'})
+    //     .then(
+    //         function (data) { //сработает, если вернется успех
+    //             // console.log(data.text());
+    //             return data.text();
+    //         },
+    //         function (data) { //сработает, если не вернется успех
     //
-    // request.addEventListener('load', function () {
-    //     console.log(request.responseText);
-    // });
+    //         }
+    //     )
+    //     .then(function (data) { //сработает, если вернется успех
+    //         // console.log(data);
+    //     }, function (data) { //сработает, если не вернется успех
     //
-    // request.open('POST', '/upload_photo.php');
-    // request.send(formData);
-
-    fetch('/upload_photo.php', {body: formData, method: 'POST'})
-        .then(
-            function (data) { //сработает, если вернется успех
-                // console.log(data.text());
-                return data.text();
-            },
-            function (data) { //сработает, если не вернется успех
-
-            }
-        )
-        .then(function (data) { //сработает, если вернется успех
-            // console.log(data);
-        }, function (data) { //сработает, если не вернется успех
-
-        })
+    //     })
 });
