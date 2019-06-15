@@ -1,130 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!--    <a href="index.css"></a>-->
+    <a href="index.css"></a>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Посетитель мероприятия</title>
 </head>
 <body>
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-<!--    <div>-->
-<!--    <button class="btn btn-outline-secondary">Button 1</button>-->
-<!--    <button class="btn btn-outline-secondary">Button 2</button>-->
-<!--    <button class="btn btn-outline-secondary">Button 3</button>-->
-<!--    </div>-->
+
+<!--<div class="padding">-->
+
+<nav class="navbar navbar-light" style="background-color: black;">
     <nav class="nav">
-        <a class="nav-link active" href="Upload_file/index.html">Download photo</a>
-        <a class="nav-link" href="makePic.html">Take a pic</a>
-        <a class="nav-link" href="#">Button 3</a>
+        <a class="nav-link" href="mainSTR.html"><img src="PNG/menu.png"> </a>
+        <a class="nav-link active" href="organisator.html">1</a>
+        <a class="nav-link" href="#">2</a>
+
+        <div class="logotype"><img src="PNG/web_logo.png"></div>
+        
     </nav>
 </nav>
 
-<!--    <div class="container">-->
-<!--        <h3>Hello!</h3>-->
-<!--    </div>-->
+
+<br>
+    <div class="container">
+        <h3>Регистрация на мероприятие: Педагогическая встреча</h3>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+                <div class="col-md-auto">
+
+
+                    <form id="upload-container" method="POST" action="send.php">
+                        <img id="upload-image" src="PNG/photos_from_event.png">
+                        <div class="text">
+                            <input id="file-input" type="file" name="file" multiple>
+                            <label for="file-input">Выберите фото</label> <br>
+                            <span>или перетащите его сюда</span>
+                        </div>
+                    </form>
+
+                <br> <br>
+
+                    <table style="height: 100px;">
+                        <tbody>
+                        <tr>
+                            <td class="align-middle">
+
+                    <small>эта фотография не будет нигде <br>
+                    опубликована и нужна только для <br>
+                    входа на мероприятие и возможности <br>
+                    посмотреть свои фото с мероприятия</small>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </form>
+
+            </div>
+            <div class="col-sm">
+
+<div class="p-2 bd-highlight">
+
+    <br><br>
 <form>
-    <div class="shadow p-3 mb-5 bg-white rounded">
+    <div class="container-fluid">
+        <div class="shadow p-3 mb-5 bg-white rounded">
     <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
-        <small id="emailHelp" class="form-text text-muted">The information you provide is available only to you.</small>
+        <label for="exampleFormControlInput1"><small>Как к Вам обращаться?</small></label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Введите ваше имя">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-<!--        <form>-->
-<!--            <div class="form-group">-->
-<!--                <label for="exampleFormControlFile1">Select a photo from your device</label>-->
-<!--                <input type="file" class="form-control-file" id="exampleFormControlFile1">-->
-<!--            </div>-->
-<!--        </form>-->
-<!--    <div class="form-group form-check">-->
-<!--        <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
-<!--        <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
-<!--    </div>-->
-        <div class="input-group mb-3">
-            <div class="dropdown">
-<!--                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                    Currency-->
-<!--                </button>-->
-<!--                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-<!--                    <a class="dropdown-item" href="#">₽</a>-->
-<!--                    <a class="dropdown-item" href="#">$</a>-->
-<!--                    <a class="dropdown-item" href="#">€</a>-->
-<!--                </div>-->
-
-
-<!--                <div class="btn-group btn-group-toggle" data-toggle="buttons">-->
-<!--                    <label class="btn btn-secondary active">-->
-<!--                        <input type="radio" name="options" id="option1" autocomplete="off" checked> ₽-->
-<!--                    </label>-->
-<!--                    <label class="btn btn-secondary">-->
-<!--                        <input type="radio" name="options" id="option2" autocomplete="off"> $-->
-<!--                    </label>-->
-<!--                    <label class="btn btn-secondary">-->
-<!--                        <input type="radio" name="options" id="option3" autocomplete="off"> €-->
-<!--                    </label>-->
-<!--                </div>-->
-
-                <select id="inputState" class="form-control">
-                    <option selected>Currency</option>
-                    <option>₽</option>
-                    <option>$</option>
-                    <option>€</option>
-                </select>
-
-
-<!--                <div class="form-group">-->
-<!--                    <label for="exampleFormControlSelect1">Example select</label>-->
-<!--                    <select class="form-control" id="exampleFormControlSelect1">-->
-<!--                        <option>₽</option>-->
-<!--                        <option>$</option>-->
-<!--                        <option>€</option>-->
-<!--                    </select>-->
-<!--                </div>-->
-            </div>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-            <div class="input-group-append">
-                <span class="input-group-text">.00</span>
-            </div>
-        </div>
-        <select id="inputState" class="form-control">
-            <option selected>Choose...</option>
-            <option>Не снимайте</option>
-            <option>Снимайте</option>
+        <label for="exampleFormControlSelect1"><small>Фотографии на мероприятии (выберите нужный пункт):</small></label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>Я против, чтобы мои фото выложили на сайт и социальные сети</option>
+            <option>Я хочу, чтобы мое лицо было закрашено на фото.</option>
+            <option>Я хочу, чтобы информация обо мне была доступна другим пользователям
+                (Информация из раздела "О себе" будет высвечиваться при наведении на Вашу фотографию)</option>
         </select>
-
-        <br>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <nav class="nav">
-            <a class="nav-link active" href="#">Continue</a>
-        </nav>
-<!--       <button type="submit" class="btn btn-primary">Continue</button>-->
     </div>
+
+
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1"><small>О себе (по желанию):</small></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+
+            <nav class="nav">
+                <a class="nav-link active" id="btn_send" href="mainSTR.html"><img src="PNG/button.png"> </a>
+            </nav>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+
 </form>
-<!--    <nav class="navbar navbar-light bg-light">-->
-<!--        <form class="form-inline">-->
-<!--            <div class="input-group">-->
-<!--                <div class="input-group-prepend">-->
-<!--                    <span class="input-group-text" id="basic-addon1">@</span>-->
-<!--                </div>-->
-<!--                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">-->
-<!--            </div>-->
-<!--            <nav class="navbar navbar-light bg-light">-->
-<!--                <form class="form-inline">-->
-<!--                    <button class="btn btn-sm btn-outline-secondary" type="button">button</button>-->
-<!--                </form>-->
-<!--            </nav>-->
-<!--        </form>-->
-<!--    </nav>-->
+
+</div>
+
 <script>
     var formData = new FormData();
 
