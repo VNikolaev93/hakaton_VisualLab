@@ -71,7 +71,7 @@ def blur_pic(path, coord):
     blurred_img = cropped_img.filter(ImageFilter.GaussianBlur(radius=15))
     img.paste(blurred_img, tuple(coord))
     #img.show()
-    img.save(path)
+    img.save("./result/" + path[10:])
 
 def compare_all(img1, img2, path):
     face1 = getFace(img1)
