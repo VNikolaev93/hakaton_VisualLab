@@ -37,7 +37,7 @@
     }
     $files = array_map(function ($item) use ($folder)
         {
-            return mb_substr($item, mb_strlen($folder));
+            return substr($item, strlen($folder));
         }, 
         $files
     );
